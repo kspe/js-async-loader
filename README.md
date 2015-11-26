@@ -29,7 +29,7 @@ var libs = {
 };
 
 
-for(var lib in libs) {
+for (var lib in libs) {
     loadAsync(lib);
 }
 
