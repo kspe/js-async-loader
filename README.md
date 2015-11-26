@@ -2,7 +2,9 @@
 
 ####_"load asynchronously, execute consequently"_
 
-Pure no-library solution (just a little inline script) to help you eliminate render-blocking JavaScript. No additional library. No additional HTTP request.
+Pure no-library solution (just a little inline script) to help you eliminate render-blocking JavaScript. 
+
+No additional library. No additional HTTP request.
 
 Ideal for Google PageSpeed test.
 
