@@ -2,31 +2,27 @@
 
 ####_"load asynchronously, execute consequently"_
 
-The simplest possible solution to help you eliminate render-blocking JavaScript. 
+The simplest possible solution to help you eliminate render-blocking JavaScript.
 
 No additional library. No additional HTTP request. Just a little inline script.
 
-Ideal for Google PageSpeed test. 
+Ideal for Google PageSpeed test.
 
 ## Example
 
 ```js
 var libs = {
 	"jquery": {
-		url: "https://code.jquery.com/jquery-2.1.4.min.js",
-		content: null
+		url: "https://code.jquery.com/jquery-2.1.4.min.js"
 	},
 	"bxSlider": {
-		url: "https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.5/jquery.bxslider.min.js",
-		content: null
+		url: "https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.5/jquery.bxslider.min.js"
 	},
 	"angular": {
-		url: "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-beta.2/angular.min.js",
-		content: null
+		url: "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-beta.2/angular.min.js"
 	},
 	"ngAnimate": {
-		url: "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-animate.min.js",
-		content: null
+		url: "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-animate.min.js"
 	}
 	// your custom JS here...
 };
