@@ -9,7 +9,6 @@ Ideal for Google PageSpeed test.
 ## Example
 
 ```js
-// put all your JS files here, in correct order
 var libs = {
     "jquery": {
         url: "https://code.jquery.com/jquery-2.1.4.min.js",
