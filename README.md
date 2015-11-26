@@ -2,7 +2,7 @@
 
 ###_"load asynchronously, execute consequently"_
 
-Pure no-library solution (just a little inline script) to help you eliminate render-blocking JavaScript. 
+Pure no-library solution (just a little inline script) to help you eliminate render-blocking JavaScript.
 
 Ideal for Google PageSpeed test.
 
@@ -10,51 +10,51 @@ Ideal for Google PageSpeed test.
 
 ```js
 var libs = {
-    "jquery": {
-        url: "https://code.jquery.com/jquery-2.1.4.min.js",
-        content: null
-    },
-    "bxSlider": {
-        url: "https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.5/jquery.bxslider.min.js",
-        content: null
-    },
-    "angular": {
-        url: "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-beta.2/angular.min.js",
-        content: null
-    },
-    "ngAnimate": {
-        url: "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-animate.min.js",
-        content: null
-    }
+	"jquery": {
+		url: "https://code.jquery.com/jquery-2.1.4.min.js",
+		content: null
+	},
+	"bxSlider": {
+		url: "https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.5/jquery.bxslider.min.js",
+		content: null
+	},
+	"angular": {
+		url: "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-beta.2/angular.min.js",
+		content: null
+	},
+	"ngAnimate": {
+		url: "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-animate.min.js",
+		content: null
+	}
 };
 
 
 for (var lib in libs) {
-    loadAsync(lib);
+	loadAsync(lib);
 }
 
 
 /* FUNCTIONS */
 
 function loadAsync(lib) {
-    var http = new XMLHttpRequest();
-    http.open("GET", libs[lib].url, true);
-    http.onload = function() {
-        libs[lib].content = http.responseText;
-        startScripts();
-    };
-    http.send();
-}   // loadAsync
+	var http = new XMLHttpRequest();
+	http.open("GET", libs[lib].url, true);
+	http.onload = function () {
+		libs[lib].content = http.responseText;
+		startScripts();
+	};
+	http.send();
+} // loadAsync
 
 function startScripts() {
-    var allLoaded = true;
-    for(var lib in libs) {
-        allLoaded = allLoaded && Boolean(libs[lib].content);
-    }
-    if (allLoaded) {
-        for(var lib in libs) {
-            eval(libs[lib].content);
-        }
-    }
-}   // startScripts
+	var allLoaded = true;
+	for (var lib in libs) {
+		allLoaded = allLoaded && Boolean(libs[lib].content);
+	}
+	if (allLoaded) {
+		for (lib in libs) {
+			eval(libs[lib].content);
+		}
+	}
+} // startScripts
 ```
