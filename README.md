@@ -52,7 +52,6 @@ function startScripts() {
         allLoaded = allLoaded && Boolean(libs[lib].content);
     }
     if (allLoaded) {
-        console.log("allLoaded");
         for(var lib in libs) {
             eval(libs[lib].content);
         }
