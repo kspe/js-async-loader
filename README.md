@@ -34,7 +34,7 @@ for (var lib in libs) {
 }
 
 
-/* FUNCTIONS */
+/* LOADER FUNCTIONS */
 
 function loadAsync(lib) {
 	var http = new XMLHttpRequest();
