@@ -4,7 +4,7 @@
 
 No-library (just a little inline script) solution to help you eliminate render-blocking JavaScript. Ideal for Google PageSpeed test.
 
-,,,
+```js
 // put all your JS files here, in correct order
 var libs = {
     "jquery": {
@@ -27,4 +27,4 @@ var libs = {
 for(var lib in libs) {
     loadAsync(lib);
 }
-,,,
+```
