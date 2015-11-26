@@ -4,7 +4,7 @@
 
 Pure no-library (just a little inline script) solution to help you eliminate render-blocking JavaScript. 
 
-No additional JavaScript library. No additional HTTP request.
+No additional JavaScript library. No additional HTTP request. Just two little functions.
 
 Ideal for Google PageSpeed test.
 
