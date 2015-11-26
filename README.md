@@ -29,23 +29,23 @@ var libs = {
 };
 
 for (var lib in libs) {
-	loadAsync(lib);
+	loadAsync(lib, libs);
 }
 
 
 /* LOADER FUNCTIONS */
 
-function loadAsync(lib) {
+function loadAsync(lib, libs) {
 	var http = new XMLHttpRequest();
 	http.open("GET", libs[lib].url, true);
 	http.onload = function () {
 		libs[lib].content = http.responseText;
-		startScripts();
+		startScripts(libs);
 	};
 	http.send();
 } // loadAsync
 
-function startScripts() {
+function startScripts(libs) {
 	var allLoaded = true;
 	for (var lib in libs) {
 		allLoaded = allLoaded && Boolean(libs[lib].content);
