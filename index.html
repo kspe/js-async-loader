@@ -2,11 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>JS load page</title>
+    <title>JS Async Loader</title>
 </head>
 <body>
 
-    <div class="button"></div>
 
     <script>
         var libs = {
@@ -32,7 +31,6 @@
             loadAsync(lib);
         }
 
-
         /* FUNCTIONS */
 
         function loadAsync(lib) {
@@ -45,7 +43,6 @@
             http.send();
         }   // loadAsync
 
-
         function startScripts() {
             var allLoaded = true;
             for(var lib in libs) {
@@ -54,12 +51,10 @@
             if (allLoaded) {
                 console.log("allLoaded");
                 for(var lib in libs) {
-                    // execute consequently
                     eval(libs[lib].content);
                 }
             }
         }   // startScripts
     </script>
-
 </body>
 </html>
