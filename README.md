@@ -28,6 +28,7 @@ var libs = {
 		url: "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-animate.min.js",
 		content: null
 	}
+	// your custom JS here...
 };
 
 for (var lib in libs) {
