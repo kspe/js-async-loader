@@ -4,9 +4,9 @@
 
 Pure JavaScript solution to help you eliminate render-blocking scripts. 
 
-No additional library. No additional HTTP request. Just two little functions.
+No additional library. No additional HTTP request. Just a little inline script.
 
-Ideal for Google PageSpeed test. Put it in HTML directly, just below the fold.
+Ideal for Google PageSpeed test. 
 
 ## Example
 
