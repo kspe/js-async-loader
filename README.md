@@ -35,6 +35,7 @@ for(var lib in libs) {
 
 
 /* FUNCTIONS */
+
 function loadAsync(lib) {
     var http = new XMLHttpRequest();
     http.open("GET", libs[lib].url, true);
@@ -44,6 +45,7 @@ function loadAsync(lib) {
     };
     http.send();
 }   // loadAsync
+
 function startScripts() {
     var allLoaded = true;
     for(var lib in libs) {
