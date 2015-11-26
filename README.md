@@ -4,6 +4,8 @@
 
 No-library (just a little inline script) solution to help you eliminate render-blocking JavaScript. Ideal for Google PageSpeed test.
 
+## Exapmle
+
 ```js
 // put all your JS files here, in correct order
 var libs = {
