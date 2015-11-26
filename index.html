@@ -27,32 +27,31 @@
         		content: null
         	}
         };
-
-
+        
         for (var lib in libs) {
-        	loadAsync(lib);
+        	loadAsync(lib, libs);
         }
-
-
-        /* FUNCTIONS */
-
-        function loadAsync(lib) {
+        
+        
+        /* LOADER FUNCTIONS */
+        
+        function loadAsync(lib, libs) {
         	var http = new XMLHttpRequest();
         	http.open("GET", libs[lib].url, true);
         	http.onload = function () {
         		libs[lib].content = http.responseText;
-        		startScripts();
+        		startScripts(libs);
         	};
         	http.send();
         } // loadAsync
-
-        function startScripts() {
+        
+        function startScripts(libs) {
         	var allLoaded = true;
         	for (var lib in libs) {
         		allLoaded = allLoaded && Boolean(libs[lib].content);
         	}
         	if (allLoaded) {
-                console.log("allLoaded");
+        	    console.log("allLoaded");
         		for (lib in libs) {
         			eval(libs[lib].content);
         		}
