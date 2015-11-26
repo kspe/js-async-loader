@@ -31,7 +31,6 @@ var libs = {
 
 
 for(var lib in libs) {
-    // execute consequently
     loadAsync(lib);
 }
 ```
