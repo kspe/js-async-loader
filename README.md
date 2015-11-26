@@ -32,4 +32,28 @@ var libs = {
 for(var lib in libs) {
     loadAsync(lib);
 }
+
+
+/* FUNCTIONS */
+function loadAsync(lib) {
+    var http = new XMLHttpRequest();
+    http.open("GET", libs[lib].url, true);
+    http.onload = function() {
+        libs[lib].content = http.responseText;
+        startScripts();
+    };
+    http.send();
+}   // loadAsync
+function startScripts() {
+    var allLoaded = true;
+    for(var lib in libs) {
+        allLoaded = allLoaded && Boolean(libs[lib].content);
+    }
+    if (allLoaded) {
+        console.log("allLoaded");
+        for(var lib in libs) {
+            eval(libs[lib].content);
+        }
+    }
+}   // startScripts
 ```
