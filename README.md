@@ -2,11 +2,11 @@
 
 ####_"load asynchronously, execute consequently"_
 
-Pure no-library solution (just a little inline code) to help you eliminate render-blocking JavaScript. 
+Pure JavaScript solution to help you eliminate render-blocking scripts. 
 
-No additional JavaScript library. No additional HTTP request. Just two little functions.
+No additional library. No additional HTTP request. Just two little functions.
 
-Ideal for Google PageSpeed test. 
+Ideal for Google PageSpeed test. Put it in HTML directly, just below the fold.
 
 ## Example
 
