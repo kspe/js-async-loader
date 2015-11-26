@@ -6,7 +6,7 @@ Pure JavaScript solution to help you eliminate render-blocking scripts.
 
 No additional library. No additional HTTP request. Just a little inline script.
 
-Ideal for Google page speed test. 
+Ideal for Google PageSpeed test. 
 
 ## Example
 
