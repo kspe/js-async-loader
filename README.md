@@ -2,7 +2,7 @@
 
 ####_"load asynchronously, execute consequently"_
 
-Pure JavaScript solution to help you eliminate render-blocking scripts. 
+Simplest possible solution to help you eliminate render-blocking JavaScript. 
 
 No additional library. No additional HTTP request. Just a little inline script.
 
