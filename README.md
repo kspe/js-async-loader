@@ -6,7 +6,7 @@ No-library (just a little inline script) solution to help you eliminate render-b
 
 Ideal for Google PageSpeed test.
 
-## Exapmle
+## Example
 
 ```js
 // put all your JS files here, in correct order
