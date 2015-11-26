@@ -28,7 +28,10 @@ var libs = {
         content: null
     }
 };
+
+
 for(var lib in libs) {
+    // execute consequently
     loadAsync(lib);
 }
 ```
