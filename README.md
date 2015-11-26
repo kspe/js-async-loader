@@ -1,4 +1,4 @@
-# async-loader
+# JavaScript Async Loader
 
 ### "load asynchronously, execute consequently"
 
