@@ -63,7 +63,7 @@
 
             // load both libs asynchronously
             for (var lib in jqueryLibs) {
-                loadAsync(lib, libs, null); // no callback
+                loadAsync(lib, jqueryLibs, null); // no callback
             }
 
             for (var lib in angularLibs) {
@@ -71,7 +71,8 @@
             }
 
             function startAngular() {
-                angular.bootstrap(document, ["myApp"]); // start angular app when loaded
+                //angular.bootstrap(document, ["myApp"]); // start angular app when loaded
+                console.log("Starting Angular app...")
             }
         </script>
     </footer>
