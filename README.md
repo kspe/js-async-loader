@@ -6,8 +6,9 @@ The simplest possible solution to help you eliminate render-blocking JavaScript.
 * No additional library.
 * No additional HTTP request.
 * Just a little inline script.
+* Ideal for Google PageSpeed test.
 
-Ideal for Google PageSpeed test.
+See it in action: [mudroljub.github.io/js-async-loader](http://mudroljub.github.io/js-async-loader/)
 
 ## How to use it
 
