@@ -11,7 +11,7 @@ Ideal for Google PageSpeed test.
 
 ## How to use it
 
-Open index.html. Put all your script in `libs` object, as key/value pair:
+Open `index.html`. Put all your script in `libs` object, as key/value pair:
 
 ```js
 const libs = {
