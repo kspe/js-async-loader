@@ -1,58 +1,54 @@
 # JavaScript Async Loader
-
-####_"load asynchronously, execute consequently"_
+> "load asynchronously, execute consequently"
 
 The simplest possible solution to help you eliminate render-blocking JavaScript.
 
-No additional library. No additional HTTP request. Just a little inline script.
+* No additional library.
+* No additional HTTP request.
+* Just a little inline script.
 
 Ideal for Google PageSpeed test.
 
-## Example
+## How to use it
+
+Put all your script in libs object, as key/value pair. Custom `.js` usually goes at the end.
 
 ```js
-var libs = {
-	"jquery": {
-		url: "https://code.jquery.com/jquery-2.1.4.min.js"
-	},
-	"bxSlider": {
-		url: "https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.5/jquery.bxslider.min.js"
-	},
-	"angular": {
-		url: "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-beta.2/angular.min.js"
-	},
-	"ngAnimate": {
-		url: "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-animate.min.js"
-	}
-	// add your custom JS here...
-};
+const libs = {
+  "jquery": "https://code.jquery.com/jquery-2.1.4.min.js",
+  "bxSlider": "https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.5/jquery.bxslider.min.js",
+  "angular": "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-beta.2/angular.min.js",
+  "ngAnimate": "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-animate.min.js"
+}
+```
 
-for (var lib in libs) {
-	loadAsync(lib);
+## Source code
+
+```js
+// put all your JS files here, in correct order
+const libs = {
+  "jquery": "https://code.jquery.com/jquery-2.1.4.min.js",
+  "bxSlider": "https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.5/jquery.bxslider.min.js",
+  "angular": "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-beta.2/angular.min.js",
+  "ngAnimate": "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-animate.min.js"
+}
+const loadedLibs = {}
+let counter = 0
+
+const loadAsync = function(lib) {
+  var http = new XMLHttpRequest()
+  http.open("GET", libs[lib], true)
+  http.onload = () => {
+    loadedLibs[lib] = http.responseText
+    if (++counter == Object.keys(libs).length) startScripts()
+  }
+  http.send()
 }
 
+const startScripts = function() {
+  for (var lib in libs) eval(loadedLibs[lib])
+  console.log("allLoaded")
+}
 
-/* LOADER FUNCTIONS */
-
-function loadAsync(lib) {
-	var http = new XMLHttpRequest();
-	http.open("GET", libs[lib].url, true);
-	http.onload = function () {
-		libs[lib].content = http.responseText;
-		startScripts();
-	};
-	http.send();
-} // loadAsync
-
-function startScripts() {
-	var allLoaded = true;
-	for (var lib in libs) {
-		allLoaded = allLoaded && Boolean(libs[lib].content);
-	}
-	if (allLoaded) {
-		for (lib in libs) {
-			eval(libs[lib].content);
-		}
-	}
-} // startScripts
+for (var lib in libs) loadAsync(lib)
 ```
