@@ -10,7 +10,7 @@ The simplest possible solution to help you eliminate render-blocking JavaScript.
 
 See it in action: [mudroljub.github.io/js-async-loader](http://mudroljub.github.io/js-async-loader/)
 
-## How to use it
+## How to use
 
 Open `index.html`. Put all your script in `libs` object, as key/value pair:
 
