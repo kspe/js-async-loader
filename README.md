@@ -12,9 +12,7 @@ See it in action: [mudroljub.github.io/js-async-loader](http://mudroljub.github.
 
 ## How to use
 
-Copy this script to your HTML. 
-
-Put all your js files in `libs` object, as key/value pair (replace existing):
+Just copy this script to HTML and replace the files in the `libs` object with yours (as key/value pair):
 
 ```html
   <script>
