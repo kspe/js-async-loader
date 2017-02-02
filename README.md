@@ -24,4 +24,4 @@ const libs = {
 }
 ```
 
-Custom `.js` usually goes at the end.
+Custom `js` file usually goes at the end.
