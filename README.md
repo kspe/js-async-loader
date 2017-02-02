@@ -12,7 +12,11 @@ See it in action: [mudroljub.github.io/js-async-loader](http://mudroljub.github.
 
 ## How to use
 
-Copy this script to your HTML:
+Copy this script to your HTML. 
+
+Put all your js files in `libs` object, as key/value pair (replace existing).
+
+Custom `js` file usually goes at the end.
 
 ```html
   <script>
@@ -41,5 +45,3 @@ Copy this script to your HTML:
     for (var lib in libs) loadAsync(lib)
   </script>
   ```
-
-Put all your script in `libs` object, as key/value pair (custom `js` file usually goes at the end).
