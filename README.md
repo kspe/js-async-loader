@@ -14,9 +14,7 @@ See it in action: [mudroljub.github.io/js-async-loader](http://mudroljub.github.
 
 Copy this script to your HTML. 
 
-Put all your js files in `libs` object, as key/value pair (replace existing).
-
-Custom `js` file usually goes at the end.
+Put all your js files in `libs` object, as key/value pair (replace existing):
 
 ```html
   <script>
