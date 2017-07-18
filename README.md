@@ -1,5 +1,5 @@
 # JavaScript Async Loader
-####_"load asynchronously, execute consequently"_
+#### *load asynchronously, execute consequently*
 
 The simplest possible solution to help you eliminate render-blocking JavaScript.
 
